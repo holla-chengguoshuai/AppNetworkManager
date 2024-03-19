@@ -1,0 +1,6 @@
+framework module AppNetworkManager {
+  umbrella header "AppNetworkManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - AppNetworkManager (0.1.0)
+
+DEPENDENCIES:
+  - AppNetworkManager (from `../`)
+
+EXTERNAL SOURCES:
+  AppNetworkManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AppNetworkManager: 998f1d034e9f0b55dffb457bff401ec51eca7928
+
+PODFILE CHECKSUM: 9103c8292f8729b15a5413af415b25734f61f0b7
+
+COCOAPODS: 1.15.2
