@@ -1,16 +1,39 @@
 PODS:
-  - AppNetworkManager (0.1.0)
+  - Alamofire (5.9.0)
+  - AppNetworkManager (0.1.0):
+    - Alamofire
+    - HandyJSON
+    - ObjectMapper
+    - SwiftyJSON
+  - HandyJSON (5.0.2)
+  - ObjectMapper (4.2.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - AppNetworkManager (from `../`)
+  - HandyJSON
+  - ObjectMapper
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HandyJSON
+    - ObjectMapper
+    - SwiftyJSON
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   AppNetworkManager:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AppNetworkManager: 998f1d034e9f0b55dffb457bff401ec51eca7928
+  Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
+  AppNetworkManager: a5ef7543a5b060b34ace6cfeb9b6eca68da4b512
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 9103c8292f8729b15a5413af415b25734f61f0b7
+PODFILE CHECKSUM: f8be9d28a9bdcab5c02645b4cdeb7caaef1fde59
 
 COCOAPODS: 1.15.2

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0259F9592BAAD59900E2452B /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259F9582BAAD59900E2452B /* BaseProtocol.swift */; };
+		0259F95B2BAAD7BA00E2452B /* ConvApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0259F95A2BAAD7BA00E2452B /* ConvApi.swift */; };
 		1FDFBF27E7B4FA9C5CC39C21 /* Pods_AppNetworkManager_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A39DC77F6F3E780B5C39420 /* Pods_AppNetworkManager_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,8 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05AF0976F634C32FBAA835C6 /* AppNetworkManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AppNetworkManager.podspec; path = ../AppNetworkManager.podspec; sourceTree = "<group>"; };
-		34F04B10B7FD1F8D9A1C3BAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0259F9582BAAD59900E2452B /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
+		0259F95A2BAAD7BA00E2452B /* ConvApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvApi.swift; sourceTree = "<group>"; };
+		05AF0976F634C32FBAA835C6 /* AppNetworkManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AppNetworkManager.podspec; path = ../AppNetworkManager.podspec; sourceTree = "<group>"; };
+		34F04B10B7FD1F8D9A1C3BAD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AppNetworkManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNetworkManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +50,7 @@
 		A36AA07428C314936735BBF7 /* Pods_AppNetworkManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNetworkManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A884C0E6D08BA7F8F7B3F53E /* Pods-AppNetworkManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetworkManager_Example.release.xcconfig"; path = "Target Support Files/Pods-AppNetworkManager_Example/Pods-AppNetworkManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D446ED12301F59690267369B /* Pods-AppNetworkManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetworkManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-AppNetworkManager_Example/Pods-AppNetworkManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D87BF003AF93188A7110A666 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		D87BF003AF93188A7110A666 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				0259F9582BAAD59900E2452B /* BaseProtocol.swift */,
+				0259F95A2BAAD7BA00E2452B /* ConvApi.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -156,7 +162,6 @@
 				81B07BB62F57EAF055B7651F /* Pods-AppNetworkManager_Tests.debug.xcconfig */,
 				63F52B383E71106C260AFC37 /* Pods-AppNetworkManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +232,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -313,11 +319,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AppNetworkManager_Example/Pods-AppNetworkManager_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AppNetworkManager/AppNetworkManager.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppNetworkManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,6 +345,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0259F95B2BAAD7BA00E2452B /* ConvApi.swift in Sources */,
+				0259F9592BAAD59900E2452B /* BaseProtocol.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);

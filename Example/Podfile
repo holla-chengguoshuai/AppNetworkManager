@@ -1,10 +1,16 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '10.0'
 
 target 'AppNetworkManager_Example' do
   pod 'AppNetworkManager', :path => '../'
+  pod 'SwiftyJSON'
+  pod 'ObjectMapper'
+  pod 'HandyJSON'
 
+  
   target 'AppNetworkManager_Tests' do
     inherit! :search_paths
 
