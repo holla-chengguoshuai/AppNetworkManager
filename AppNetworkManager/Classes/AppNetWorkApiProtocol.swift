@@ -39,12 +39,25 @@ public extension App_ApiProtocol {
         AF.sessionConfiguration.timeoutIntervalForRequest = timeout
         AF.sessionConfiguration.timeoutIntervalForResource = timeout
         let parameterJson = parameter
+        print("\n\n Request:\(self.host)\(self.pathURL)\(parameter?.network_JsonString ?? "")\n")
+
         let header = self.header(parameter: parameterJson)
-        return AppNetworkManager(request: AF.request( "\(self.host)\(self.pathURL)", method: method, parameters: parameterJson, encoding: self.encoding, headers: header))
+        
+        return AppNetworkManager(request: AF.request( "\(self.host)\(self.pathURL)", method: method, parameters: parameterJson, encoding: JSONEncoding.default, headers: header))
     }
     
     
-    
-    
-    
+}
+
+
+public extension Dictionary {
+    var network_JsonString: String {
+        let defaultJsonStr = "[]"
+
+        guard let data = try? JSONSerialization.data(withJSONObject: self) else {
+            return defaultJsonStr
+        }
+
+        return String(data: data, encoding: .utf8) ?? defaultJsonStr
+    }
 }
